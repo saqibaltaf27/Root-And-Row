@@ -25,5 +25,5 @@ app.use((req, res) => {
 
 // Start Server
 app.listen(PORT, () => {
-    console.log(`Root & Row API Running on https://localhost:${PORT}`);
+    console.log(`Root & Row API Running on http://localhost:${PORT}`);
 });
