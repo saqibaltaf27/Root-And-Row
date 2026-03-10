@@ -1,0 +1,35 @@
+Project: Root & Row - Farm to Table Provenance API
+
+Overview:
+Root & Row is a seasonal farm-to-table bistro that wants to display daily ingredient sourcing for diners. This API will provide the backend for the
+restaurants "Provenance Board", showing where each ingredient comes from and when it was received.
+
+Requirements:
+1. Develop a RESTful API using Node.js and Express, organized into logical directories: routes, models, controllers.
+2. Data Models:
+    - Farms:
+        - id (auto generated)
+        - name (string)
+        - location (town/country)
+        - specialty ("Organic Root Vegetables")
+
+    - Ingredients:
+        - id (auto generated)
+        - name (string)
+        - farm_id (foreign key to Farms)
+        - date_received (ISO Date)
+        - daily_special (boolean)
+
+3. Core Endpoints:
+    - GET /farms : Lists all partner farms.
+    - GET /provenance : Lists all ingredients received in the last 24 hours, including farm details.
+    - POST /ingredients : Logs a new ingredient delivery. Uses a simple hardcoded API key header for validation.
+
+4. SQLite database for local, lightweight storage.
+5. README.md Documentation explaining how to run the server, and send or receive sample request.
+
+Deliverables:
+1. Codebase: A ZIP file containing the complete source code, including a package.json or requirements.txt and the local database file/seed data.
+2. Public Repository: A link to a public GitHub repository containing the code and a detailed README.
+3. Deployment: A live URL where the API is hosted (e.g., Render, Railway, or Vercel).
+4. Demonstration: A short screen recording or a PDF of screenshots showing successful API calls using a tool like Postman or Insomnia.
